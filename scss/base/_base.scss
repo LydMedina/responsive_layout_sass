@@ -1,0 +1,71 @@
+/* Base Styles
+======================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $stack-roboto;
+  color: $color-text;  
+  background: $body;
+  text-align: center;
+}
+
+ol,
+ul,
+.project-image {
+	margin: 1.1em;
+	padding: 0;
+	list-style-type: none;
+
+	@media #{$tablet} {
+		display: flex;				
+		background-color: transparent;
+	}
+}
+
+img {
+	width: 100%;	
+}
+
+nav a,
+.footer-nav a,
+.back-to-top a {
+	display: block;
+	color: $color-text;
+	font-size: $one-em;
+	font-weight: 800;	
+	text-align: center;
+	padding: 1em 0;	
+	text-decoration: none;
+}
+
+.name {	
+	font-size: 1.8em;
+	font-weight: 800;
+	color: $color-text;
+	text-decoration: none;
+	align-self: center;
+
+	@media #{$desktop} {
+		padding-left: 1em;
+	}
+}
+
+
+p {
+	font-size: $one-em;
+	text-align: center;
+	padding-bottom:  1em;
+
+	@media #{$tablet}{		
+		padding: 0 2em 2em;
+	}
+
+	@media #{$desktop} {
+		padding: 0 6px;
+	}
+}

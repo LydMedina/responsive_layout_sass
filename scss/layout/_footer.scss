@@ -1,0 +1,45 @@
+/* Footer Styles
+======================= */
+.main-footer {
+	@extend %content;
+	@extend %flex;
+	flex-direction: row;
+
+	@media #{$tablet} {
+		margin: 0 24px;
+		padding-top: 0;
+		padding-bottom: 3em;
+	}
+
+	@media #{$desktop} {
+		display: flex;		
+		flex-direction: row;				
+		background-color: transparent;
+		padding-bottom: 1em;
+	}
+}
+
+.footer-name {	
+	font-size: $one-em;
+	font-weight: 800;
+	color: $color-text;
+	text-decoration: none;
+	align-self: center;
+	margin-left: 10px;
+
+	@media #{$tablet} {
+		align-self: center;
+	}
+} 
+
+.footer-nav {
+	display: none;  
+
+	@media #{$tablet} {
+		display: flex;		
+		flex-direction: row;	
+		justify-content: flex-end;			
+		background-color: transparent;
+		margin: 0;	
+	}
+}

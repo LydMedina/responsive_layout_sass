@@ -1,0 +1,19 @@
+/* Horizontal Styles
+======================= */
+
+hr {
+	border-bottom: 1px solid #dcdcdc;
+	border-top: none;
+	border-left: none;
+	border-right: none;	
+	width: 300px;	
+	padding-top: 1em;
+
+	@media #{$tablet} {
+		width: 720px;
+	}
+
+	@media #{$desktop} {
+		width: 95%;
+	}
+}

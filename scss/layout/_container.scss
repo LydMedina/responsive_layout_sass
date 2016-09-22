@@ -1,0 +1,99 @@
+/* Container Styles
+======================= */
+.wrapper {		
+	background-color: $wrapper-color;
+	padding-top: 1em;		
+}
+
+.about {
+	@extend %padding;
+	@extend %flex;
+	flex-direction: row-reverse;
+	flex-wrap: wrap;
+
+	@media #{$tablet} {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		padding-top: 60px;
+	}
+
+	@media #{$desktop} {
+		padding-top: 0;
+	}
+}
+
+.profile-image {
+	display: block;	
+	margin: 0 50px;	
+	order: -1;
+
+	@media #{$tablet} {
+		order: 1;
+		width: 37%;
+		margin: 0;
+		padding-top: 1em;
+	}
+}
+
+.portfolio-page, 
+.skills-page {
+	@extend %padding;
+	overflow: hidden;
+}
+
+#portfolio,
+#skills {
+	padding-bottom: 1em;
+}
+		
+	
+.portfolio-page,
+a.portfolio_link {
+		background-color: $portfolio-color;		
+		color: $color-text;	
+
+@media #{$tablet} {
+		color: $portfolio-color;
+		background-color: transparent;
+		}
+}		
+
+
+
+
+
+.skills-page,
+a.skills_link {
+	background-color: $skills-color;	
+	color: $color-text;
+
+	@media #{$tablet} {
+		color: $skills-color;
+		background-color: transparent;
+	}
+}
+
+
+/* Contact Style */
+#contact {
+	padding: 2em 0;		
+}
+
+#contact p {
+	padding: 0 1em;
+
+	@media #{$tablet} {
+		text-align: center;
+		padding: 0 22%;
+	}
+}
+
+.phone,
+.email {
+	color: $color-text;
+	text-decoration: none;
+	font-weight: 800;
+	padding-left: 1em;
+}

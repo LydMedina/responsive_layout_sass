@@ -1,0 +1,35 @@
+/* Descriptive color variables
+======================= */
+
+$blue-bayoux	: #495f73;
+$biloga-flower	: #c7b5ed;
+$water-leaf		: #a1eddf;
+$spring-wood	: #f7f5f0;
+$white			: #fff;
+
+
+/* Functional color variables
+======================= */	
+
+$color-text			: $blue-bayoux;
+$portfolio-color	: $biloga-flower;
+$skills-color		: $water-leaf;
+$body				: $spring-wood;
+$wrapper-color		: $white;
+
+/* Font stacks
+======================= */
+
+$stack-roboto	: 'Roboto', sans-serif;
+
+/* Font size
+======================= */
+
+$one-em			: 1em;
+
+
+/* Media queries breakpoint
+======================= */
+
+$tablet		: '(min-width: 768px)';
+$desktop	: '(min-width: 1024px)';

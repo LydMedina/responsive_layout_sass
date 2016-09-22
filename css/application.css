@@ -1,0 +1,257 @@
+/* Global Imports
+======================= */
+/* Base Imports
+======================= */
+/* Descriptive color variables
+======================= */
+/* Functional color variables
+======================= */
+/* Font stacks
+======================= */
+/* Font size
+======================= */
+/* Media queries breakpoint
+======================= */
+/* Base Styles
+======================= */
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: #495f73;
+  background: #f7f5f0;
+  text-align: center; }
+
+ol,
+ul,
+.project-image {
+  margin: 1.1em;
+  padding: 0;
+  list-style-type: none; }
+  @media (min-width: 768px) {
+    ol,
+    ul,
+    .project-image {
+      display: flex;
+      background-color: transparent; } }
+
+img {
+  width: 100%; }
+
+nav a,
+.footer-nav a,
+.back-to-top a {
+  display: block;
+  color: #495f73;
+  font-size: 1em;
+  font-weight: 800;
+  text-align: center;
+  padding: 1em 0;
+  text-decoration: none; }
+
+.name {
+  font-size: 1.8em;
+  font-weight: 800;
+  color: #495f73;
+  text-decoration: none;
+  align-self: center; }
+  @media (min-width: 1024px) {
+    .name {
+      padding-left: 1em; } }
+
+p {
+  font-size: 1em;
+  text-align: center;
+  padding-bottom: 1em; }
+  @media (min-width: 768px) {
+    p {
+      padding: 0 2em 2em; } }
+  @media (min-width: 1024px) {
+    p {
+      padding: 0 6px; } }
+
+/* Layout Imports
+======================= */
+/* Descriptive color variables
+======================= */
+/* Functional color variables
+======================= */
+/* Font stacks
+======================= */
+/* Font size
+======================= */
+/* Media queries breakpoint
+======================= */
+/* Header Styles
+======================= */
+.main-header {
+  flex-direction: column; }
+  @media (min-width: 1024px) {
+    .main-header {
+      display: flex;
+      flex-direction: row;
+      background-color: transparent; } }
+
+nav li {
+  list-style-type: none;
+  flex: 1;
+  justify-content: space-around;
+  margin-top: .5em;
+  background-color: #fff; }
+  @media (min-width: 768px) {
+    nav li {
+      display: flex;
+      background-color: transparent;
+      flex-direction: row; } }
+  @media (min-width: 1024px) {
+    nav li {
+      margin: 0 1em; } }
+
+/* Container Styles
+======================= */
+.wrapper {
+  background-color: #fff;
+  padding-top: 1em; }
+
+.about {
+  flex-direction: row-reverse;
+  flex-wrap: wrap; }
+  @media (min-width: 768px) {
+    .about {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      padding-top: 60px; } }
+  @media (min-width: 1024px) {
+    .about {
+      padding-top: 0; } }
+
+.profile-image {
+  display: block;
+  margin: 0 50px;
+  order: -1; }
+  @media (min-width: 768px) {
+    .profile-image {
+      order: 1;
+      width: 37%;
+      margin: 0;
+      padding-top: 1em; } }
+
+.portfolio-page,
+.skills-page {
+  overflow: hidden; }
+
+#portfolio,
+#skills {
+  padding-bottom: 1em; }
+
+.portfolio-page,
+a.portfolio_link {
+  background-color: #c7b5ed;
+  color: #495f73; }
+  @media (min-width: 768px) {
+    .portfolio-page,
+    a.portfolio_link {
+      color: #c7b5ed;
+      background-color: transparent; } }
+
+.skills-page,
+a.skills_link {
+  background-color: #a1eddf;
+  color: #495f73; }
+  @media (min-width: 768px) {
+    .skills-page,
+    a.skills_link {
+      color: #a1eddf;
+      background-color: transparent; } }
+
+/* Contact Style */
+#contact {
+  padding: 2em 0; }
+
+#contact p {
+  padding: 0 1em; }
+  @media (min-width: 768px) {
+    #contact p {
+      text-align: center;
+      padding: 0 22%; } }
+
+.phone,
+.email {
+  color: #495f73;
+  text-decoration: none;
+  font-weight: 800;
+  padding-left: 1em; }
+
+/* Footer Styles
+======================= */
+.main-footer {
+  flex-direction: row; }
+  @media (min-width: 768px) {
+    .main-footer {
+      margin: 0 24px;
+      padding-top: 0;
+      padding-bottom: 3em; } }
+  @media (min-width: 1024px) {
+    .main-footer {
+      display: flex;
+      flex-direction: row;
+      background-color: transparent;
+      padding-bottom: 1em; } }
+
+.footer-name {
+  font-size: 1em;
+  font-weight: 800;
+  color: #495f73;
+  text-decoration: none;
+  align-self: center;
+  margin-left: 10px; }
+  @media (min-width: 768px) {
+    .footer-name {
+      align-self: center; } }
+
+.footer-nav {
+  display: none; }
+  @media (min-width: 768px) {
+    .footer-nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      background-color: transparent;
+      margin: 0; } }
+
+/* Header and Footer Content
+======================= */
+.main-header, .main-footer {
+  justify-content: space-between; }
+
+.main-header, .about, .main-footer {
+  display: flex; }
+
+.about, .portfolio-page,
+.skills-page {
+  padding: 1em; }
+
+/* Components Imports
+======================= */
+/* Horizontal Styles
+======================= */
+hr {
+  border-bottom: 1px solid #dcdcdc;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 300px;
+  padding-top: 1em; }
+  @media (min-width: 768px) {
+    hr {
+      width: 720px; } }
+  @media (min-width: 1024px) {
+    hr {
+      width: 95%; } }
+
+/*# sourceMappingURL=application.css.map */
