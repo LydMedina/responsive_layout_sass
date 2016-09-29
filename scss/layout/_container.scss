@@ -6,20 +6,20 @@
 }
 
 .about {
-	@extend %padding;
-	@extend %flex;
+	padding: 1em;
+	@extend	%flex;
 	flex-direction: row-reverse;
 	flex-wrap: wrap;
 
-	@media #{$tablet} {
+	@include tablet {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: space-between;
 		padding-top: 60px;
-	}
+	}	
 
-	@media #{$desktop} {
+	@include desktop {
 		padding-top: 0;
 	}
 }
@@ -27,9 +27,9 @@
 .profile-image {
 	display: block;	
 	margin: 0 50px;	
-	order: -1;
+	order: -1;	
 
-	@media #{$tablet} {
+	@include tablet {
 		order: 1;
 		width: 37%;
 		margin: 0;
@@ -39,7 +39,7 @@
 
 .portfolio-page, 
 .skills-page {
-	@extend %padding;
+	padding: 1em;
 	overflow: hidden;
 }
 
@@ -49,29 +49,36 @@
 }
 		
 	
-.portfolio-page,
+.portfolio-page {
+	background-color: $portfolio-color;		
+	color: $color-text;
+}
+
 a.portfolio_link {
-		background-color: $portfolio-color;		
-		color: $color-text;	
+	background-color: $portfolio-color;		
+	color: $color-text;	
 
-@media #{$tablet} {
+	@include tablet {			
 		color: $portfolio-color;
-		background-color: transparent;
+		background-color: transparent;						
 		}
-}		
+}	
+
+.skills-page {
+	background-color: $skills-color;	
+	color: $color-text;
+}
 
 
-
-
-
-.skills-page,
 a.skills_link {
 	background-color: $skills-color;	
 	color: $color-text;
 
-	@media #{$tablet} {
+	@include tablet {
+		
 		color: $skills-color;
 		background-color: transparent;
+			
 	}
 }
 
@@ -84,7 +91,7 @@ a.skills_link {
 #contact p {
 	padding: 0 1em;
 
-	@media #{$tablet} {
+	@include tablet {
 		text-align: center;
 		padding: 0 22%;
 	}

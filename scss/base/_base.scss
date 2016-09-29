@@ -21,7 +21,7 @@ ul,
 	padding: 0;
 	list-style-type: none;
 
-	@media #{$tablet} {
+	@include tablet {	
 		display: flex;				
 		background-color: transparent;
 	}
@@ -50,22 +50,21 @@ nav a,
 	text-decoration: none;
 	align-self: center;
 
-	@media #{$desktop} {
+	@include desktop {
 		padding-left: 1em;
-	}
+	}	
 }
-
 
 p {
 	font-size: $one-em;
 	text-align: center;
 	padding-bottom:  1em;
 
-	@media #{$tablet}{		
+	@include tablet {
 		padding: 0 2em 2em;
 	}
 
-	@media #{$desktop} {
+	@include desktop {
 		padding: 0 6px;
 	}
 }

@@ -1,20 +1,18 @@
 /* Footer Styles
 ======================= */
-.main-footer {
-	@extend %content;
-	@extend %flex;
-	flex-direction: row;
 
-	@media #{$tablet} {
+.main-footer {
+	justify-content: space-between;	
+	@extend %flex;	
+	flex-direction: row;	
+
+	@include tablet {
 		margin: 0 24px;
 		padding-top: 0;
 		padding-bottom: 3em;
 	}
 
-	@media #{$desktop} {
-		display: flex;		
-		flex-direction: row;				
-		background-color: transparent;
+	@include desktop {
 		padding-bottom: 1em;
 	}
 }
@@ -25,21 +23,26 @@
 	color: $color-text;
 	text-decoration: none;
 	align-self: center;
-	margin-left: 10px;
-
-	@media #{$tablet} {
-		align-self: center;
-	}
+	margin-left: 10px;	
 } 
 
 .footer-nav {
-	display: none;  
+	display: none;	
 
-	@media #{$tablet} {
+	@include tablet {
 		display: flex;		
 		flex-direction: row;	
 		justify-content: flex-end;			
 		background-color: transparent;
-		margin: 0;	
+		margin: 0;
+			li {
+				margin: 0 1em;
+			}
 	}
+
+	@include desktop {
+		display: flex;		
+		flex-direction: row;				
+		background-color: transparent;
+	}	
 }

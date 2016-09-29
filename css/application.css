@@ -10,7 +10,7 @@
 ======================= */
 /* Font size
 ======================= */
-/* Media queries breakpoint
+/* Media Queries
 ======================= */
 /* Base Styles
 ======================= */
@@ -75,19 +75,10 @@ p {
 
 /* Layout Imports
 ======================= */
-/* Descriptive color variables
-======================= */
-/* Functional color variables
-======================= */
-/* Font stacks
-======================= */
-/* Font size
-======================= */
-/* Media queries breakpoint
-======================= */
 /* Header Styles
 ======================= */
 .main-header {
+  justify-content: space-between;
   flex-direction: column; }
   @media (min-width: 1024px) {
     .main-header {
@@ -105,7 +96,8 @@ nav li {
     nav li {
       display: flex;
       background-color: transparent;
-      flex-direction: row; } }
+      flex-direction: row;
+      text-decoration: none; } }
   @media (min-width: 1024px) {
     nav li {
       margin: 0 1em; } }
@@ -117,6 +109,7 @@ nav li {
   padding-top: 1em; }
 
 .about {
+  padding: 1em;
   flex-direction: row-reverse;
   flex-wrap: wrap; }
   @media (min-width: 768px) {
@@ -143,28 +136,33 @@ nav li {
 
 .portfolio-page,
 .skills-page {
+  padding: 1em;
   overflow: hidden; }
 
 #portfolio,
 #skills {
   padding-bottom: 1em; }
 
-.portfolio-page,
+.portfolio-page {
+  background-color: #c7b5ed;
+  color: #495f73; }
+
 a.portfolio_link {
   background-color: #c7b5ed;
   color: #495f73; }
   @media (min-width: 768px) {
-    .portfolio-page,
     a.portfolio_link {
       color: #c7b5ed;
       background-color: transparent; } }
 
-.skills-page,
+.skills-page {
+  background-color: #a1eddf;
+  color: #495f73; }
+
 a.skills_link {
   background-color: #a1eddf;
   color: #495f73; }
   @media (min-width: 768px) {
-    .skills-page,
     a.skills_link {
       color: #a1eddf;
       background-color: transparent; } }
@@ -190,6 +188,7 @@ a.skills_link {
 /* Footer Styles
 ======================= */
 .main-footer {
+  justify-content: space-between;
   flex-direction: row; }
   @media (min-width: 768px) {
     .main-footer {
@@ -198,9 +197,6 @@ a.skills_link {
       padding-bottom: 3em; } }
   @media (min-width: 1024px) {
     .main-footer {
-      display: flex;
-      flex-direction: row;
-      background-color: transparent;
       padding-bottom: 1em; } }
 
 .footer-name {
@@ -210,9 +206,6 @@ a.skills_link {
   text-decoration: none;
   align-self: center;
   margin-left: 10px; }
-  @media (min-width: 768px) {
-    .footer-name {
-      align-self: center; } }
 
 .footer-nav {
   display: none; }
@@ -222,19 +215,19 @@ a.skills_link {
       flex-direction: row;
       justify-content: flex-end;
       background-color: transparent;
-      margin: 0; } }
+      margin: 0; }
+      .footer-nav li {
+        margin: 0 1em; } }
+  @media (min-width: 1024px) {
+    .footer-nav {
+      display: flex;
+      flex-direction: row;
+      background-color: transparent; } }
 
-/* Header and Footer Content
+/* Flex Display
 ======================= */
-.main-header, .main-footer {
-  justify-content: space-between; }
-
 .main-header, .about, .main-footer {
   display: flex; }
-
-.about, .portfolio-page,
-.skills-page {
-  padding: 1em; }
 
 /* Components Imports
 ======================= */
@@ -253,5 +246,38 @@ hr {
   @media (min-width: 1024px) {
     hr {
       width: 95%; } }
+
+/* Media Queries */
+/* 768px */
+@media (min-width: 768px) {
+  .about-content {
+    width: 61%; }
+
+  .about-content p {
+    text-align: left;
+    font-size: 21px; }
+
+  [class^="col"] {
+    float: left;
+    padding: 0 .5rem; }
+
+  .col {
+    width: calc(100% /12 * 6); }
+
+  .back-to-top {
+    display: none; } }
+/* 1024px */
+@media (min-width: 1024px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent; }
+
+  .about-content p {
+    text-align: left;
+    font-size: 24px; }
+
+  .col {
+    width: calc(100% /12 * 4); } }
 
 /*# sourceMappingURL=application.css.map */
